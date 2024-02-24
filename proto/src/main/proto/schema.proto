@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package com.anuradha;
+
+option java_multiple_files = true;
+
+message Book {
+  int32 bookId = 1;
+  string isbn = 2;
+  string title = 3;
+  string author = 4;
+  int32 pages = 5;
+  float price = 6;
+  bool available = 7;
+}
+
+message Author {
+  int32 authorId = 1;
+  string name = 2;
+  string email = 3;
+  string bio = 4;
+}
+
+service BookAuthorService {
+  rpc getAuthor(Author) returns (Author) {}
+}
