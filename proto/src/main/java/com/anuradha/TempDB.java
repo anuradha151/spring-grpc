@@ -8,7 +8,6 @@ import java.util.List;
  */
 public class TempDB {
 
-    // create two static mechods to random authors data list and random books data list
     public static List<Author> getAuthors() {
         List<Author> authors = new ArrayList<>();
         authors.add(Author.newBuilder().setAuthorId(1).setName("Anuradha").setEmail("anuradha@gmail.com").setBio("Super rude").build());
