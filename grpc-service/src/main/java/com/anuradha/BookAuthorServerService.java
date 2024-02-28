@@ -1,6 +1,5 @@
 package com.anuradha;
 
-import com.anuradha.BookAuthorServiceGrpc.BookAuthorServiceImplBase;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 
