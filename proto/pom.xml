@@ -8,6 +8,7 @@
     </parent>
 
     <artifactId>proto</artifactId>
+    <version>1.0.0.RELEASE</version>
     <packaging>jar</packaging>
 
     <name>proto</name>
@@ -20,7 +21,7 @@
         <protobuf-plugin.version>0.6.1</protobuf-plugin.version>
         <grpc.version>1.58.0</grpc.version>
 
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
@@ -58,6 +59,16 @@
         </extensions>
 
         <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <phase>none</phase>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.xolstice.maven.plugins</groupId>
                 <artifactId>protobuf-maven-plugin</artifactId>
